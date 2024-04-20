@@ -1,0 +1,12 @@
+name: Deploy
+on: [push]
+jobs:
+  Explore-GitHub-Actions:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v4
+      - name: Mostrar directorio actual
+        run: pwd
+      - name: Listar directorio 
+        run: ls -la
