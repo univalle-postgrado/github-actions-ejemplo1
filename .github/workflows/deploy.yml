@@ -16,3 +16,11 @@ jobs:
         run: npm ci
       # - name: Realizamos pruebas unitarias
       #   run: npm test
+      - name: Build en el servidor
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: 177.222.53.32
+          username: univalle
+          password: 1234abc
+          port: 22
+          script: whoami
